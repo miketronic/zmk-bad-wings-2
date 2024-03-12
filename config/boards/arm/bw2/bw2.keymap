@@ -94,11 +94,25 @@
            bindings = <&kp>, <&kp>;
         };
 
-        td0: tap_dance_0 {
+        tdW: tap_dance_W {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
-            bindings = <&kp N1>, <&kp N2>;
+            bindings = <&kp W>, <&kp ESC>;
+        };
+
+        tdO: tap_dance_O {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp O>, <&kp COMMA>;
+        };
+
+        tdY: tap_dance_Y {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp Y>, <&kp DOT>;
         };
 
     };
@@ -116,15 +130,15 @@
 
         ALPHA_layer {
 // ---------------------------------------------------------------------------------------------------------------
-// |   TAB   |    W    |    F    |    G    |         |    X    |         |    M    |    L    |    U    |  BSPC   |
+// |   TAB   |    W   [Q]   F    |    G    |         |    X    |         |    M    |    L    |    U    |  BSPC   |
 // |  SHIFT  |    A    |    R    |    S    |         |    X    |         |    N    |    E    |    I    |  DEL    |
 // |  XXXX   |    C    |    D    |    T    |         |    X    |         |    ,    |    .    |    /    |  XXXX   |
 //                     |   GUI   |   DEL   | RETURN  |    X    |   TAB   |   BSPC  |  R ALT  |
 // ---------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp TAB     &kp W  &kp F  &kp G                 &none  &none     &kp M  &kp L  &kp U  &kp P
+                &kp TAB     &tdW  &kp F  &kp G                 &none  &none     &kp M  &kp L  &kp U  &kp P
                 &kp LSHIFT  &kp S  &kp R  &kp S                      &none  &none     &kp G  &kp H  &kp J  &kp K
-                &none       &hrm LGUI X  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &kp O &kp Y  &kp SLASH
+                &none       &hrm LGUI X  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO &tdY &kp SLASH
                                         &kp LCTRL   &sl SYMBOL  &skq LSHIFT  &kp SPACE &lt NUMBER BSPC  &kp RET
             >;
         };

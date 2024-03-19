@@ -66,22 +66,22 @@
             key-positions = <16 17>;
             bindings = <&kp K>;
         };
-        combo_excl; {
+        combo_excl {
             timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp EXCL>;
         };
-        combo_z; {
+        combo_z {
             timeout-ms = <50>;
             key-positions = <21 22>;
             bindings = <&kp Z>;
         };
-        combo_x; {
+        combo_x {
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp X>;
         };
-        combo_qmark; {
+        combo_qmark {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp QMARK>;

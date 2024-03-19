@@ -30,7 +30,21 @@
             timeout-ms = <50>;
             key-positions = <1 10>;
             bindings = <&bootloader>;
-
+        };
+        combo_q {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp Q>;
+        };
+        combo_b {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp B>;
+        };
+        combo_j {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp J>;
         };
     };
 
@@ -130,9 +144,9 @@
 
         ALPHA_layer {
 // ---------------------------------------------------------------------------------------------------------------
-// |   TAB   |    W   [Q]   F    |    G    |         |    X    |         |    M    |    L    |    U    |  BSPC   |
-// |  SHIFT  |    A    |    R    |    S    |         |    X    |         |    N    |    E    |    I    |  DEL    |
-// |  XXXX   |    C    |    D    |    T    |         |    X    |         |    ,    |    .    |    /    |  XXXX   |
+// |   TAB   |    W   [Q]   F   [B]   G    |         |    X    |         |    M   [J]   L    |    U    |  BSPC   |
+// |  SHIFT  |    A   [V]   R   [P]   S    |         |    X    |         |    N   [K]   E   [!]   I    |  DEL    |
+// |  XXXX   |    C   [Z]   D   [X]   T    |         |    X    |         |    H   [,]   O   [.]   Y    |  XXXX   |
 //                     |   GUI   |   DEL   | RETURN  |    X    |   TAB   |   BSPC  |  R ALT  |
 // ---------------------------------------------------------------------------------------------------------------
             bindings = <

@@ -46,17 +46,49 @@
             key-positions = <6 7>;
             bindings = <&kp J>;
         };
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp BSPC>;
+        };
+        combo_v {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp V>;
+        };
+        combo_p {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp P>;
+        };
+        combo_k {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp K>;
+        };
+        combo_excl; {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp EXCL>;
+        };
+        combo_z; {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp Z>;
+        };
+        combo_x; {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp X>;
+        };
+        combo_qmark; {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp QMARK>;
+        };
     };
 
     behaviors {
-        qesc: tap_dance_qesc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_qesc";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&kp Q>, <&kp ESC>;
-        };
-
         bkt: tap_dance_bracket {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_bracket";
@@ -128,7 +160,6 @@
             tapping-term-ms = <180>;
             bindings = <&kp Y>, <&kp DOT>;
         };
-
     };
 
     conditional_layers {
@@ -147,13 +178,13 @@
 // |   TAB   |    W   [Q]   F   [B]   G    |         |    X    |         |    M   [J]   L    |    U    |  BSPC   |
 // |  SHIFT  |    A   [V]   R   [P]   S    |         |    X    |         |    N   [K]   E   [!]   I    |  DEL    |
 // |  XXXX   |    C   [Z]   D   [X]   T    |         |    X    |         |    H   [,]   O   [.]   Y    |  XXXX   |
-//                     |   GUI   |   DEL   | RETURN  |    X    |   TAB   |   BSPC  |  R ALT  |
+//                     |   Copy  |SPC/SHFT | RETURN  |    X    |   SPC   |SPC/ENT  |   Paste |
 // ---------------------------------------------------------------------------------------------------------------
             bindings = <
                 &kp TAB     &tdW  &kp F  &kp G                 &none  &none     &kp M  &kp L  &kp U  &kp P
-                &kp LSHIFT  &kp S  &kp R  &kp S                      &none  &none     &kp G  &kp H  &kp J  &kp K
+                &kp LSHIFT  &kp A  &kp R  &kp S                      &none  &none     &kp G  &kp H  &kp J  &kp K
                 &none       &hrm LGUI X  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO &tdY &kp SLASH
-                                        &kp LCTRL   &sl SYMBOL  &skq LSHIFT  &kp SPACE &lt NUMBER BSPC  &kp RET
+                         &kp LC(C)   &mt LSHIFT SPACE  &none  &none &mt RSHIFT ENTER  &kp LC(V)
             >;
         };
 

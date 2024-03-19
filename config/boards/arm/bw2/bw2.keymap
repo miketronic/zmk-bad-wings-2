@@ -192,10 +192,10 @@
 //                     |   Copy  |SPC/SHFT | RETURN  |    X    |   SPC   |SPC/ENT  |   Paste |
 // ---------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp TAB     &tdW  &kp F  &kp G                 &none  &none     &kp M  &kp L  &kp U  &kp P
-                &kp LSHIFT  &kp A  &kp R  &kp S                      &none  &none     &kp G  &kp H  &kp J  &kp K
-                &none       &hrm LGUI X  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO &tdY &kp SLASH
-                         &kp LC(C)   &mt LSHIFT A  &none  &none &mt RSHIFT B  &kp LC(V) 
+                &kp TAB     &tdW   &kp F          &kp G        &none  &none     &kp M  &kp L  &kp U  &kp P
+                &kp LSHIFT  &kp A  &kp R          &kp S        &none  &none     &kp G  &kp H  &kp J  &kp K
+                &none       &kp C  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO   &tdY   &kp SLASH
+                         &kp LC(C)   &mt LSHIFT SPC            &none  &none     &mt RSHIFT ENT  &kp LC(V) 
             >;
         };
 

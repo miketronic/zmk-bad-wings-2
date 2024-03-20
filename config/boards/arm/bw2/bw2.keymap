@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define ALPHA       0
-#define SYMBOL      1
-#define NUMBER      2
+#define SYM         1
+#define NUM         2
 #define NAVIGATION  3
 
 &mt {
@@ -56,7 +56,7 @@
         compatible = "zmk,combos";
         combo_bspc {
             timeout-ms = <50>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             bindings = <&kp BSPC>;
         };
 
@@ -119,12 +119,12 @@
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
 
-        brc: tap_dance_brace {
+        cln: tap_dance_colon {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_braces";
+            label = "tap_dance_colon";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LBRC>, <&kp RBRC>;
+            bindings = <&kp COLON>, <&kp SEMI>;
         };
 
         par: tap_dance_paren {
@@ -141,6 +141,14 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LT>, <&kp GT>;
+        };
+
+        qot: tap_dance_quote {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_quote";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&kp DQT>;
         };
 
         hrm: homerow_mods {
@@ -188,24 +196,24 @@
 
         ALPHA_layer {
 // ---------------------------------------------------------------------------------------------------------------
-// |   TAB   |    W   [Q]   F   [B]   G    |         |    X    |         |    M   [J]   L    |    U    |  BSPC   |
-// |  SHIFT  |    A   [V]   R   [P]   S    |         |    X    |         |    N   [K]   E   [!]   I    |  DEL    |
-// |  XXXX   |    C   [Z]   D   [X]   T    |         |    X    |         |    H   [,]   O   [.]   Y    |  XXXX   |
+// |   TAB   |    W   [Q]   F   [B]   G num|         |    X    |         |    M   [J]   L    |    U    |  BSPC   |
+// |  SHIFT  |    A   [V]   R   [P]   S sym|         |    X    |         |    N   [K]   E   [!]   I    |  DEL    |
+// |  XXXX   |    C   [Z]   D   [X]   T    |         |    X    |         | H  tt,  |  O tt.  |    Y    |  XXXX   |
 //                     |   Copy  |SPC/SHFT | RETURN  |    X    |   SPC   |SPC/ENT  |   Paste |
 // ---------------------------------------------------------------------------------------------------------------
             bindings = <
-                &kp TAB     &tdW   &kp F          &kp G        &none  &none     &kp M  &kp L  &kp U  &kp P
-                &kp LSHIFT  &kp A  &kp R          &kp S        &none  &none     &kp G  &kp H  &kp J  &kp K
+                &kp TAB     &tdW   &kp F          &lt NUM G        &none  &none     &kp M  &kp L  &kp U  &kp BSPC
+                &kp LSHIFT  &kp A  &kp R          &lt SYM S        &none  &none     &kp G  &kp H  &kp J  &kp DEL
                 &none       &kp C  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO   &tdY   &kp SLASH
                          &kp LC(C)   &mt LSHIFT SPC            &none  &none     &mt RSHIFT RET  &kp LC(V)
             >;
         };
 
-        SYMBOL_layer {
+        SYM_layer {
             bindings = <
-                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &none
-                &kp GRAVE   &kp TILDE   &kp UNDER   &kp EQUAL   &none       &bkt        &brc        &par        &thn        &kp BSLH
-                &none       &none       &kp PLUS    &kp MINUS   &none       &none       &none       &kp COLON   &trans     &kp SEMI
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &par        &bkt        &thn        &none
+                &kp GRAVE   &kp TILDE   &kp UNDER   &kp EQUAL   &none       &bkt        &cln        &par        &thn        &kp BSLH
+                &none       &none       &kp PLUS    &kp MINUS   &none       &none       &qot        &kp COLON   &trans     &kp SEMI
                                         &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };

@@ -197,7 +197,7 @@
                 &kp TAB     &tdW   &kp F          &kp G        &none  &none     &kp M  &kp L  &kp U  &kp P
                 &kp LSHIFT  &kp A  &kp R          &kp S        &none  &none     &kp G  &kp H  &kp J  &kp K
                 &none       &kp C  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO   &tdY   &kp SLASH
-                         &kp LC(C)   &kp A           &none  &none     &kp B  &kp LC(V)
+                         &kp LC(C)   &kp A           &mt LSHIFT SPC  &none     &kp B  &kp LC(V)
             >;
         };
 

@@ -151,6 +151,38 @@
             bindings = <&kp SQT>, <&kp DQT>;
         };
 
+        sls: tap_dance_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_slash";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FSLH>, <&kp BSLH>;
+        };
+
+        pipe: tap_dance_pipe {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_pipe";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp PIPE>, <&kp AMPS>;
+        };
+
+        at: tap_dance_at {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_at";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp AT>, <&kp HASH>;
+        };
+
+        perc: tap_dance_perc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_perc";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp PRCNT>, <&kp DLLR>;
+        };
+
         hrm: homerow_mods {
            compatible = "zmk,behavior-hold-tap";
            label = "homerow_mods";
@@ -203,7 +235,7 @@
 // ---------------------------------------------------------------------------------------------------------------
             bindings = <
                 &kp TAB     &tdW   &kp F          &lt NUM G        &none  &none     &kp M  &kp L  &kp U  &kp BSPC
-                &kp LSHIFT  &kp A  &kp R          &lt SYM S        &none  &none     &kp G  &kp H  &kp J  &kp DEL
+                &kp LSHIFT  &kp A  &kp R          &lt SYM S        &none  &none     &kp N  &kp E  &kp I  &kp DEL
                 &none       &kp C  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO   &tdY   &kp SLASH
                          &kp LC(C)   &mt LSHIFT SPC            &none  &none     &mt RSHIFT RET  &kp LC(V)
             >;
@@ -211,9 +243,9 @@
 
         SYM_layer {
             bindings = <
-                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &par        &bkt        &thn        &none
-                &kp GRAVE   &kp TILDE   &kp UNDER   &kp EQUAL   &none       &bkt        &cln        &par        &thn        &kp BSLH
-                &none       &none       &kp PLUS    &kp MINUS   &none       &none       &qot        &kp COLON   &trans     &kp SEMI
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &none       &none   &par    &bkt        &thn        &none
+                &kp GRAVE   &kp TILDE   &kp UNDER   &kp EQUAL   &none       &none   &cln    &sls        &pipe        &kp BSLH
+                &none       &none       &kp PLUS    &kp MINUS   &none       &none   &qot    &at         &perc       &kp SEMI
                                         &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };

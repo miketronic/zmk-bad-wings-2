@@ -213,6 +213,13 @@
             tapping-term-ms = <180>;
             bindings = <&kp Y>, <&kp DOT>;
         };
+
+        td20: tap_dance_20 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp N2>, <&kp N0>;
+        };
     };
 
     conditional_layers {
@@ -243,18 +250,18 @@
 
         SYM_layer {
             bindings = <
-                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &none       &none   &par    &bkt        &thn        &none
-                &kp GRAVE   &kp TILDE   &kp UNDER   &kp EQUAL   &none       &none   &cln    &sls        &pipe        &kp BSLH
-                &none       &none       &kp PLUS    &kp MINUS   &none       &none   &qot    &at         &perc       &kp SEMI
-                                        &trans      &trans      &trans      &trans      &trans      &trans
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &none       &none   &par    &bkt   &thn     &none
+                &kp GRAVE   &kp TILDE   &kp UNDER   &none       &none       &none   &cln    &sls   &pipe    &kp BSLH
+                &none       &none       &kp PLUS    &kp MINUS   &none       &none   &qot    &at    &perc    &kp SEMI
+                                        &trans      &trans      &trans      &trans  &trans  &trans
             >;
         };
 
         NUM_layer {
             bindings = <
-                &none       &none       &none       &none       &none       &none       &none       &none       &none       &none
-                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &none       &none       &none       &none       &none       &none       &none       &none       &trans      &none
+                &none       &none       &none       &none       &none       &none       &kp N7      &kp N8      &kp N9      &none
+                &none       &none       &none       &none       &none       &none       &kp N4      &kp N5      &kp N6      &none
+                &none       &none       &none       &none       &none       &none       &kp N1      &td20       &kp N3      &none
                                         &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };

@@ -229,7 +229,7 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <SYM NUM>;
-            then-layer = <NAVIGATION>;
+            then-layer = <MOUSE>;
         };
     };
 

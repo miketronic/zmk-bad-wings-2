@@ -12,7 +12,10 @@
 #define ALPHA       0
 #define SYM         1
 #define NUM         2
-#define NAVIGATION  3
+#define MOUSE       3
+#define MACRO       4
+#define FN          5
+
 
 &mt {
     flavor = "tap-preferred";
@@ -243,7 +246,7 @@
             bindings = <
                 &kp TAB     &tdW   &kp F          &lt NUM G        &none  &none     &kp M  &kp L  &kp U  &kp BSPC
                 &kp LSHIFT  &kp A  &kp R          &lt SYM S        &none  &none     &kp N  &kp E  &kp I  &kp DEL
-                &none       &kp C  &hrm LCTRL D   &hrm LALT T  &none  &none     &kp H  &tdO   &tdY   &kp SLASH
+                &none       &kp C  &hrm LCTRL D   &hrm LALT T  &none  &none     &lt MOUSE H  &tdO   &tdY   &kp SLASH
                          &kp LC(C)   &mt LSHIFT SPC            &none  &none     &mt RSHIFT RET  &kp LC(V)
             >;
         };
@@ -266,7 +269,7 @@
             >;
         };
 
-        NAVIGATION_layer {
+        MOUSE_layer {
             bindings = <
                 &none           &kp F2          &out OUT_USB    &out OUT_BLE    &bt BT_CLR      &none       &kp HOME    &kp UP      &kp END     &kp BSPC 
                 &kp TAB         &none           &bt BT_SEL 0    &bt BT_SEL 1    &none           &none       &kp LEFT    &kp DOWN    &kp RIGHT   &kp RET

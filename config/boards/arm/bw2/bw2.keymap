@@ -304,7 +304,7 @@
             bindings = <
                 &kp PG_UP  &none       &kp UP      &none        &none    &none       &kp MINUS   &none    &none     &kp BSPC 
                 &kp END    &kp LEFT    &kp DOWN    &kp RIGHT    &none    &none       &kp UNDER   &none    &none     &none
-                &kp PG_DN  &mkp RCLK   &mkp MCLK   &mkp LCLK    &none    &none       &none       &none    &none     &none    
+                &kp PG_DN  &none       &none       &none        &none    &none       &none       &none    &none     &none    
                                                 &trans          &trans          &trans          &trans      &trans      &trans
             >;
         };

@@ -227,17 +227,6 @@
     };
 
 
-    macros {
-        date: ahk_date {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N1>
-                ;
-        };
-
-    };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -288,7 +277,7 @@
             bindings = <
                 &kp TAB    &none   &kp LC(LA(Q)) &kp LC(LA(G)) &none    &none     &kp F2      &kp UP      &none      &kp BSPC 
                 &kp END    &none     &none     &none         &none    &none       &kp LEFT    &kp DOWN    &kp RIGHT  &kp DEL 
-                &kp PG_DN  &none     &date     &none         &none    &none       &none       &none       &none      &none    
+                &kp PG_DN  &none     &none     &none         &none    &none       &none       &none       &none      &none    
                                                 &trans            &trans          &trans          &trans      &trans      &trans
             >;
         };

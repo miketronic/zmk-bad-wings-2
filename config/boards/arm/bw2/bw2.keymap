@@ -261,29 +261,6 @@
                 ;
         };
 
-        time: ahk_time {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N2>
-                ;
-        };
-
-        lines: ahk_lines {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N8>
-                ;
-        };
-
-        square: ahk_square {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N9>
-                ;
-        };
     };
 
 
@@ -336,7 +313,7 @@
             bindings = <
                 &none      &none       &none       &none        &none    &none       &none       &none    &none     &kp BSPC 
                 &none      &trans      &none       &none        &none    &none       &none       &none    &none     &none
-                &none      &none       &date       &time        &none    &none       &th         &re      &yw       &none    
+                &none      &none       &date       &none        &none    &none       &th         &re      &yw       &none    
                                                 &trans          &trans          &trans          &trans      &trans      &trans
             >;
         };

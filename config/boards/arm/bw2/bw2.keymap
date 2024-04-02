@@ -229,30 +229,6 @@
 
 
     macros {
-        th: ahk_th {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp T &kp H>
-                ;
-        };
-
-        re: ahk_re {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp R &kp E>
-                ;
-        };
-
-        yw: ahk_yw {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp Y &kp W>
-                ;
-        };
-
         date: ahk_date {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -313,7 +289,7 @@
             bindings = <
                 &none      &none       &none       &none        &none    &none       &none       &none    &none     &kp BSPC 
                 &none      &trans      &none       &none        &none    &none       &none       &none    &none     &none
-                &none      &none       &date       &none        &none    &none       &th         &re      &yw       &none    
+                &none      &none       &date       &none        &none    &none       &none       &none    &none     &none    
                                                 &trans          &trans          &trans          &trans      &trans      &trans
             >;
         };

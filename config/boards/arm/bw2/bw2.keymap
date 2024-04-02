@@ -14,8 +14,7 @@
 #define SYM         1
 #define NUM         2
 #define MOUSE       3
-#define MACRO       4
-#define FN          5
+#define FN          4
 
 
 &mt {
@@ -247,13 +246,13 @@
 // ---------------------------------------------------------------------------------------------------------------
 // |   TAB   |    W   [Q]   F   [B]   G num|         |    X    |         |    M   [J]   L    |    U    |  BSPC   |
 // |  SHIFT  |    A   [V]   R   [P]   S sym|         |    X    |         |    N   [K]   E   [!]   I    |  DEL    |
-// |  XXXX   |    C   [Z]   D   [X]   T    |         |    X    |         | H mouse |  O tt,  |  Y  tt. |  XXXX   |
+// |  XXXX   |  C  fn [Z]   D   [X]   T    |         |    X    |         | H mouse |  O tt,  |  Y  tt. |  XXXX   |
 //                     |   Copy  |SPC/SHFT | RETURN  |    X    |   SPC   | SPC/ENT |   Paste |
 // ---------------------------------------------------------------------------------------------------------------
             bindings = <
                 &kp TAB     &tdW   &kp F          &lt NUM G        &none  &none     &kp M  &kp L  &kp U  &kp BSPC
                 &kp LSHIFT  &kp A  &kp R          &lt SYM S        &none  &none     &kp N  &kp E  &kp I  &kp DEL
-                &none    &kp C  &hrm LCTRL D   &hrm LALT T  &none  &none     &lt MOUSE H  &tdO   &tdY   &kp SLASH
+                &none    &lt FN C  &hrm LCTRL D   &hrm LALT T  &none  &none     &lt MOUSE H  &tdO   &tdY   &kp SLASH
                          &kp LC(C)   &mt LSHIFT SPC            &none  &none     &mt RSHIFT RET  &kp LC(V)
             >;
         };
@@ -285,20 +284,11 @@
             >;
         };
 
-        MACRO_layer {
-            bindings = <
-                &none      &none       &none       &none        &none    &none       &none       &none    &none     &kp BSPC 
-                &none      &trans      &none       &none        &none    &none       &none       &none    &none     &none
-                &none      &none       &date       &none        &none    &none       &none       &none    &none     &none    
-                                                &trans          &trans          &trans          &trans      &trans      &trans
-            >;
-        };
-
         FN_layer {
             bindings = <
                 &kp TAB    &none   &kp LC(LA(Q)) &kp LC(LA(G)) &none    &none     &kp F2      &kp UP      &none      &kp BSPC 
                 &kp END    &none     &none     &none         &none    &none       &kp LEFT    &kp DOWN    &kp RIGHT  &kp DEL 
-                &kp PG_DN  &none     &none     &none         &none    &none       &none       &none       &none      &none    
+                &kp PG_DN  &none     &date     &none         &none    &none       &none       &none       &none      &none    
                                                 &trans            &trans          &trans          &trans      &trans      &trans
             >;
         };

@@ -3,6 +3,7 @@
 CONFIG_BOARD_BW2=y
 CONFIG_SOC_SERIES_STM32F0X=y
 CONFIG_SOC_STM32F072XB=y
+
 # 48MHz system clock
 CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=48000000
 
@@ -21,11 +22,18 @@ CONFIG_SPI=n
 
 # ZMK Settings
 CONFIG_ZMK_USB=y
+
 # CONFIG_ZMK_KSCAN_MATRIX_POLLING=y
 CONFIG_USB_SELF_POWERED=n
 
-# Needed to reduce this to size that will fit on F072
-CONFIG_HEAP_MEM_POOL_SIZE=1024
+# Needed to reduce this to size that will fit on F072, not needed if no display
+CONFIG_HEAP_MEM_POOL_SIZE=0  
+
+# Interrupt service routine stack size halved
+CONFIG_ISR_STACK_SIZE=1024
+
+# Up to 8 key presses or releases in a macro, tweak up if needed
+CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE=8
 
 # clock configuration
 CONFIG_CLOCK_CONTROL=y

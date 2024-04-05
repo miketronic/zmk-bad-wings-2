@@ -33,7 +33,7 @@
         compatible = "zmk,combos";
         combo_bootloader {
             timeout-ms = <50>;
-            key-positions = <1 10>;
+            key-positions = <0 1 2>;
             bindings = <&bootloader>;
         };
 
@@ -326,10 +326,10 @@
 
         MOUSE_layer {
             bindings = <
-                &kp PG_UP  &none       &mmv MOVE_UP      &none        &none    &none       &kp MINUS   &none    &none     &kp BSPC 
-                &kp END    &kp LEFT    &kp DOWN    &kp RIGHT    &none    &none       &kp UNDER   &none    &none     &none
-                &kp PG_DN  &none   &none   &none    &none    &none       &none       &none    &none     &none    
-                                                &trans          &trans          &trans          &trans      &trans      &trans
+                &kp PG_UP  &msc SCRL_UP            &mmv MOVE_UP      &msc SCRL_DOWN              &none    &none       &kp MINUS   &none    &none     &kp BSPC 
+                &kp END    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &none    &none       &kp UNDER   &none    &none     &none
+                &kp PG_DN  &mkp LCLK             &mkp MCLK             &mkp RCLK              &none    &none       &none       &none    &none     &none    
+                           &mkp LCLK             &mkp MCLK             &mkp RCLK              &trans      &trans      &trans
             >;
         };
 

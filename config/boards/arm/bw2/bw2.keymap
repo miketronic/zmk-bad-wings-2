@@ -301,7 +301,7 @@
                 &kp TAB     &tdW   &kp F          &lt NUM G        &none  &none     &kp M  &kp L  &kp U  &kp BSPC
                 &kp LSHIFT  &lt MACRO A  &kp R          &lt SYM S        &none  &none     &kp N  &kp E  &kp I  &kp DEL
                 &none    &lt FN C  &hrm LCTRL D   &hrm LALT T  &none  &none     &lt MOUSE H  &tdO   &tdY   &kp SLASH
-                         &cccv   &mt LSHIFT SPC            &none  &none     &mt RSHIFT RET  &none
+                         &cccv 2 1   &mt LSHIFT SPC            &none  &none     &mt RSHIFT RET  &none
             >;
         };
 
@@ -343,7 +343,7 @@
 
         FN_layer {
             bindings = <
-                &kp TAB    &cccv   &kp LC(LA(Q)) &kp LC(LA(G)) &none    &none     &kp F2       &kp UP      &none      &kp BSPC 
+                &kp TAB    &cccv 2 1   &kp LC(LA(Q)) &kp LC(LA(G)) &none    &none     &kp F2       &kp UP      &none      &kp BSPC 
                 &kp END    &none   &none      &none            &none    &none     &kp LEFT     &kp DOWN    &kp RIGHT  &kp DEL 
                 &kp PG_DN  &trans  &kp LC(BSPC) &none          &none    &none     &kp LC(Z)    &none       &kp LC(Y)       &none    
                                                 &trans            &trans          &trans       &trans      &trans      &trans
